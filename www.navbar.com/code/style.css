@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+  
+}
+nav{
+    background:#0b4783;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    height: 55px;
+    line-height: 55px;
+    
+}
+  nav .wrapper{
+    position: relative;
+    max-width: 1250px;
+    padding: 0 30px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.wrapper .logo a{
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 27px;
+    font-weight: 600;
+
+}
+.wrapper .nav-links{
+    display: inline-flex;
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-links .drop-menu li a{
+color: #000000;
+}
+.nav-links li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 9px 10px;
+    border-radius: 5px; /* extra border from menu content */
+    transition: all 0.3s ease;
+}
+.nav-links li a:hover{
+     /* background: #3A3B3C; drop box color */
+     color: #0088e3;
+}
+.nav-links .drop-menu{
+   background: #e9eced;
+   width:180px;
+   top: 56px;
+   line-height: 45px; 
+   position: absolute;
+   opacity: 0;
+   visibility: hidden;
+}
+.nav-links li:hover .drop-menu,
+.nav-links li:hover .big-box{
+    top: 56px;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.1s ease;
+}
+.drop-menu li a{
+    width: 100%;
+    display: block;
+    padding: 0 0 0 15px;
+    font-weight: 520;
+    border-radius: 0px;
+}
+.big-box{
+    display:relative;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 56px;
+    background: #242526;
+    width: 1200px;
+    /* left:-590px; */
+    margin-left: -590px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.1s ease;
+}
+.big-box .content{
+    background: #e9eced;
+    padding: 25px 20px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.content .row{
+    width: calc(25% - 30px);
+    line-height: 50px;
+    /* padding: 25px 2px; */
+}
+.content .row header{
+    color: #000000;
+    font-size: 24px;
+    font-weight: 700;
+}
+/* .content .row .big-links{content box border
+    /* margin-left: -10px;  
+    border: 1px solid rgba(255,255, 255,0.09); 
+} */
+/* .content .row:nth-child(1),
+.content .row:nth-child(2){
+  border-left: 100px;
+} */
+.row .big-links li{
+    padding: 0 20px;
+}
+.row .big-links li a{
+    padding: 0 20px;
+    color: #000000;
+    font-size: 20px;
+    display: block;
+
+}
+.row .big-links li a:hover{
+    color: #0088e3;
+
+}
